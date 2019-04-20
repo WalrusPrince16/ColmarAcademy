@@ -1,0 +1,151 @@
+/* Universal Rules */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+}
+img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+.background_grey {
+  background-color: lightgrey;
+}
+.left {
+  width: 60%;
+}
+.right {
+  width: 40%;
+}
+/* Header */
+
+header {
+  height: 4rem;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+
+/* Logo */
+
+#logo {
+  font-size: 1.5rem;
+  height: 2rem;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+/* Nav bar */
+
+nav.mobile {
+  display: none;
+}
+nav.desktop {
+  margin-right: 1.5rem;
+}
+ul li {
+  font-size: 1.5rem;
+  /* Using inline-block allows the line-height to affect
+     the li elements. This gives them a larger bordrer. */
+  display: inline-block;
+  line-height: 4rem;
+}
+ul li.border {
+  border-right: 1rem solid aqua;
+}
+
+/* Main Content */
+
+/* Container that holds all site content not in the header */
+.main {
+  position: relative;
+  top: 4rem;
+  min-width: 100%;
+}
+
+/* Start Here */
+
+#start_here {
+  align-items: center;
+}
+#banner-main {
+  padding: 2rem 1.5rem;
+}
+#banner-main-img img {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+#start_here_text {
+  text-align: left;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  font-size: 1.75rem;
+}
+#start_here_content {
+  flex-direction: column;
+}
+
+/* Start here button */
+#start_here_text p {
+  text-align: center;
+  background-color: grey;
+  color: white;
+  padding: 0.5rem;
+}
+
+/* Orientation */
+#orientation_left_side {
+  padding: 2rem 1.5rem;
+  flex-direction: column;
+}
+#orientation_right_content {
+  padding: 2rem 1.5rem;
+}
+#info-main {
+  width: 100%;
+}
+#info-main img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#orientation_right_content {
+  flex-direction: column;
+}
+.orientation_child {
+  padding: 1rem;
+}
+.orientation_child.no-top-padding {
+  padding-top: 0;
+}
+.orientation_child img {
+  width: 35%;
+  height: auto;
+  display: block;
+}
+.orientation-text {
+  width: 65%;
+  flex-direction: column;
+}
+
+/* Start Learning */
+
+
+
+/* Thesis Exhibit */
+
+/* Footer */
