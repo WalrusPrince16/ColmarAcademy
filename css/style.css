@@ -24,6 +24,17 @@ img {
 .right {
   width: 40%;
 }
+h1 {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0;
+  font-weight: lighter;
+}
+
 /* Header */
 
 header {
@@ -69,6 +80,7 @@ ul li.border {
 /* Main Content */
 
 /* Container that holds all site content not in the header */
+
 .main {
   position: relative;
   top: 4rem;
@@ -84,9 +96,9 @@ ul li.border {
   padding: 2rem 1.5rem;
 }
 #banner-main-img img {
-  height: auto;
-  width: 100%;
   display: block;
+  height: 100%;
+  width: 100%;
 }
 #start_here_text {
   text-align: left;
@@ -108,38 +120,44 @@ ul li.border {
 }
 
 /* Orientation */
-#orientation_left_side {
+
+#orientation_left_side, #orientation_right_content {
   padding: 2rem 1.5rem;
   flex-direction: column;
 }
-#orientation_right_content {
-  padding: 2rem 1.5rem;
-}
-#info-main {
-  width: 100%;
+#orientation_left_content {
+  flex-direction: column;
 }
 #info-main img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 #orientation_right_content {
-  flex-direction: column;
+  border-left: 1px solid lightgrey;
 }
-.orientation_child {
-  padding: 1rem;
-}
-.orientation_child.no-top-padding {
-  padding-top: 0;
-}
-.orientation_child img {
+
+.orientation-image {
   width: 35%;
   height: auto;
   display: block;
+  padding: 1rem;
+}
+.orientation-image img {
+  width: 100%;
+  display: block;
+  height: auto;
 }
 .orientation-text {
   width: 65%;
   flex-direction: column;
+  padding: 1rem;
+}
+.no-top-padding {
+  padding-top: 0;
+}
+.orientation_child {
+  border-bottom: 1px solid grey;
 }
 
 /* Start Learning */
