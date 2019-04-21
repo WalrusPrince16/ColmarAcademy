@@ -95,6 +95,9 @@ ul li.border {
 #banner-main {
   padding: 2rem 1.5rem;
 }
+#banner-main-img {
+  width: 100%;
+}
 #banner-main-img img {
   display: block;
   height: 100%;
@@ -125,6 +128,12 @@ ul li.border {
   padding: 2rem 1.5rem;
   flex-direction: column;
 }
+#orientation_left_side {
+  padding-right: 3rem;
+}
+#orientation_right_content {
+  padding-right: 0;
+}
 #orientation_left_content {
   flex-direction: column;
 }
@@ -151,7 +160,7 @@ ul li.border {
 .orientation-text {
   width: 65%;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1rem 0 1rem 1rem;
 }
 .no-top-padding {
   padding-top: 0;
@@ -161,8 +170,29 @@ ul li.border {
 }
 
 /* Start Learning */
-
-
+#start_learning {
+  background-color: lightgrey;
+  flex-direction: column;
+}
+#gallery {
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 2rem 4.5rem;
+}
+.heading {
+  margin: auto;
+}
+#gallery_image {
+  width: 100%;
+  height: auto;
+}
+#gallery_content {
+  height: auto;
+  margin: 2rem 1rem;
+}
+#gallery_text {
+  background-color: white;
+}
 
 /* Thesis Exhibit */
 
