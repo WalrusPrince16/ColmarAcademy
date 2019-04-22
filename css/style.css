@@ -4,7 +4,8 @@
   padding: 0;
 }
 html {
-  font-size: 16px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 18px;
   box-sizing: border-box;
 }
 .flex {
@@ -31,8 +32,14 @@ h1 {
 }
 h2 {
   font-size: 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   font-weight: lighter;
+}
+h3 {
+
+}
+p {
+
 }
 
 /* Main Content */
