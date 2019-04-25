@@ -1,18 +1,17 @@
 /* Universal Rules */
-* {
-  margin: 0;
-  padding: 0;
-}
 html {
   /* Imported font */
   font-family: 'Libre Franklin', sans-serif;
+  /* Used for rem */
   font-size: 16px;
+  /* Uses the border-box model to fix widths */
   box-sizing: border-box;
 }
 .flex {
   display: flex;
 }
 .mobile {
+  /* Hides objects with the mobie class */
   display: none;
 }
 img {
@@ -59,7 +58,7 @@ h1, h2, p {
 }
 /* The page is divided into four main sections */
 .main div.section:nth-child(odd) {
-  background-color: #D9D9D9; /* Light Blue */
+  background-color: #D9D9D9;
 }
 
 /* Header */
@@ -87,7 +86,8 @@ header {
 }
 
 /* Nav bar */
-nav.desktop {
+
+nav {
   margin-right: 1.5rem;
 }
 ul li {
@@ -95,15 +95,22 @@ ul li {
   /* Using inline_block allows the line_height to affect
      the li elements. This gives them a larger bordrer. */
   display: inline-block;
+  /* Line-height is used to allow the li's border to be taller than
+  its text */
   line-height: 4rem;
 }
 ul li.border {
   border-right: 1rem solid #70798C;
 }
+ul li.desktop:hover {
+  color: gold;
+  border-right: 1rem solid #F5F1ED;
+  transition: all .4s linear 0s;
+}
 
 /* Start Here */
 
-#start_here {
+#start_here_text, #start_here {
   align-items: center;
 }
 #banner_main {
@@ -119,12 +126,11 @@ ul li.border {
 }
 #start_here_text {
   text-align: left;
-  flex-direction: column;
   align-items: center;
   padding: 2rem 1.5rem;
   font-size: 1.75rem;
 }
-#start_here_content {
+#start_here_content, #start_here_text {
   flex-direction: column;
 }
 
@@ -137,6 +143,12 @@ ul li.border {
   padding: 0.5rem;
   border-radius: .5rem;
   border: .25rem solid #70798C;
+}
+#start_here_text h2.button:hover{
+  color: gold;
+  font-size: 3rem;
+  border: .25rem solid gold;
+  transition: all .4s linear 0s;
 }
 
 /* Orientation */
@@ -189,26 +201,29 @@ ul li.border {
   border-bottom: 1px solid grey;
 }
 #orientation div.orientation_child:nth-child(0n+3) {
-  background-color: #D8DBE2; /* Light Grey */
+  background-color: #D8DBE2;
 }
 
 /* Start Learning */
-#start_learning {
+
+#start_learning, .gallery_content, .gallery_text {
   flex-direction: column;
 }
 #gallery {
   flex-flow: row wrap;
   justify-content: center;
-  margin: 2rem 4.5rem;
-  margin-top: 0;
+  margin: 0 4.5rem 2rem 4.5rem;
 }
 .gallery_content {
-  flex-direction: column;
-  margin: 1rem;
-  margin-top: 0rem;
+  margin: 0 1rem 1rem 1rem;
   width: 25%;
   color: white;
   background-color: #252323;
+}
+.gallery_content:hover {
+  border: 1px solid gold;
+  border-radius: 1rem;
+  transition: all .5s ease;
 }
 .gallery_image img {
   width: 100%;
@@ -216,17 +231,12 @@ ul li.border {
   display: block;
 }
 .gallery_text {
-  flex-direction: column;
   padding: 1rem;
   max-width: 100%;
 }
 .gallery_text p,
 .gallery_text h2 {
   margin: .25rem;
-}
-/* Used to define styles for the "COURSES" p elements */
-.gallery_text p {
-  font-weight: lighter;
 }
 
 /* Thesis Exhibit */
@@ -275,6 +285,7 @@ footer {
 /* Media Queries */
 
 @media only screen and (max-width: 1024px) {
+
   /* Universal Rules */
   .mobile {
     display: block;
@@ -288,7 +299,12 @@ footer {
   .main {
     overflow: hidden;
   }
+  h1, h2, p {
+    margin: 1rem 0;
+  }
+
   /* Mobile Navigation bar */
+
   nav, nav ul, nav img {
     width: 100%;
   }
@@ -308,12 +324,18 @@ footer {
   .orientation_image, #thesis_left_side {
     padding: 0;
   }
+  #start_here_content {
+    padding: 1rem;
+  }
   /* Orientation */
   .orientation_image.mobile {
     display: block;
+    height: auto;
+    width: 100%;
   }
   .orientation_child {
     flex-direction: column;
+    font-size: 1.5rem;
   }
   .orientation_child, .orientation_text {
     padding: 1rem;
@@ -329,6 +351,7 @@ footer {
   }
   .course {
     width: 90%;
+    font-size: 1.4rem;
     text-align: left;
     background-color: #70798C;
     color: white;
