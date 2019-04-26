@@ -26,16 +26,16 @@ img {
   width: 40%;
 }
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.25rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 h1, h2, p {
-  margin: 1.15rem 0;
+  margin: .5rem 0;
 }
 /* Used for the headings in the Start Learning and Thesis sections */
 .heading {
@@ -153,18 +153,17 @@ ul li.desktop:hover {
 
 /* Orientation */
 
+#orientation_left_side {
+  padding: 2rem 3rem 2rem 1.5rem;
+}
+#orientation_right_content {
+  padding: 2rem 0 2rem 1.5rem;
+}
+
+#orientation_left_content,
+.orientation_text,
 #orientation_left_side,
 #orientation_right_content {
-  padding: 2rem 1.5rem;
-  flex-direction: column;
-}
-#orientation_right_content {
-  padding-right: 0;
-}
-#orientation_left_side {
-  padding-right: 3rem;
-}
-#orientation_left_content {
   flex-direction: column;
 }
 #info_main img {
@@ -178,20 +177,20 @@ ul li.desktop:hover {
 .orientation_image.mobile {
   display: none;
 }
+.orientation_image,
+.orientation_image img {
+  display: block;
+  height: auto;
+}
 .orientation_image {
   width: 35%;
-  height: auto;
-  display: block;
   padding: 1rem;
 }
 .orientation_image img {
   width: 100%;
-  display: block;
-  height: auto;
 }
 .orientation_text {
   width: 65%;
-  flex-direction: column;
   padding: 1rem 0 1rem 1rem;
 }
 .no_top_padding {
@@ -206,7 +205,9 @@ ul li.desktop:hover {
 
 /* Start Learning */
 
-#start_learning, .gallery_content, .gallery_text {
+#start_learning,
+.gallery_content,
+.gallery_text {
   flex-direction: column;
 }
 #gallery {
@@ -252,7 +253,8 @@ video {
 #thesis_right_content {
   flex-direction: column;
 }
-#thesis_left_side, #thesis_right_content {
+#thesis_left_side,
+#thesis_right_content {
   padding: 0 0 2rem 1.5rem;
 }
 #thesis_left_side {
@@ -287,6 +289,7 @@ footer {
 @media only screen and (max-width: 1024px) {
 
   /* Universal Rules */
+
   .mobile {
     display: block;
   }
@@ -315,40 +318,48 @@ footer {
   nav ul li, nav img {
     display: inline-block;
   }
+
   /* Main Content */
-  #start_here {
+
+  #start_here,
+  .orientation_child,
+  #courses {
     flex-direction: column;
   }
+
   #banner_main,
   #orientation_right_content,
-  .orientation_image, #thesis_left_side {
+  .orientation_image,
+  #thesis_left_side {
     padding: 0;
   }
-  #start_here_content {
+
+  #start_here_content,
+  .orientation_child,
+  .orientation_text,
+  .course {
     padding: 1rem;
   }
+
   /* Orientation */
+
   .orientation_image.mobile {
     display: block;
     height: auto;
     width: 100%;
   }
   .orientation_child {
-    flex-direction: column;
     font-size: 1.5rem;
   }
-  .orientation_child, .orientation_text {
-    padding: 1rem;
-  }
-  .orientation_image {
-    width: 100%;
-  }
+
   /* Courses */
+
   #courses {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
+
   .course {
     width: 90%;
     font-size: 1.4rem;
@@ -356,9 +367,11 @@ footer {
     background-color: #70798C;
     color: white;
     margin: .35rem;
-    padding: 1rem;
+    text-transform: uppercase;
   }
+
   /* Thesis */
+
   #thesis {
     margin-bottom: 1rem;
   }
