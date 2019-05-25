@@ -10,6 +10,9 @@ html {
 .flex {
   display: flex;
 }
+.column {
+  flex-direction: column;
+}
 .mobile {
   /* Hides objects with the mobie class */
   display: none;
@@ -52,9 +55,12 @@ h1, h2, p {
   padding-top: 4rem;
   min-height: 100%;
   min-width: 100%;
-  display: flex;
-  flex-direction: column;
   background-color: #F5F1ED;
+}
+.white_image {
+  background-color: white;
+  border-radius: .5rem;
+  margin-right: .3rem;
 }
 /* The page is divided into four main sections */
 .main div.section:nth-child(odd) {
@@ -64,11 +70,11 @@ h1, h2, p {
 /* Header */
 
 header {
-  color: black;
+  color: white;
   height: 4rem;
   width: 100%;
   border-bottom: 1px solid grey;
-  background-color: #F5F1ED;
+  background-color: black;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -82,31 +88,25 @@ header {
   font-size: 1.5rem;
   height: 2rem;
   align-items: center;
-  margin-left: 1.5rem;
 }
 
 /* Nav bar */
-
-nav {
-  margin-right: 1.5rem;
-}
 ul li {
   font-size: 1.5rem;
   /* Using inline_block allows the line_height to affect
-     the li elements. This gives them a larger bordrer. */
+     the li elements */
   display: inline-block;
-  /* Line-height is used to allow the li's border to be taller than
-  its text */
   line-height: 4rem;
+  padding-right: 1rem;
 }
-ul li.border {
-  border-right: 1rem solid #70798C;
+ul li.desktop {
+  transition: all .4s linear 0s;
 }
 ul li.desktop:hover {
   color: gold;
-  border-right: 1rem solid #F5F1ED;
   transition: all .4s linear 0s;
 }
+
 
 /* Start Here */
 
@@ -129,9 +129,6 @@ ul li.desktop:hover {
   align-items: center;
   padding: 2rem 1.5rem;
   font-size: 1.75rem;
-}
-#start_here_content, #start_here_text {
-  flex-direction: column;
 }
 
 /* Start here button */
@@ -160,12 +157,6 @@ ul li.desktop:hover {
   padding: 2rem 0 2rem 1.5rem;
 }
 
-#orientation_left_content,
-.orientation_text,
-#orientation_left_side,
-#orientation_right_content {
-  flex-direction: column;
-}
 #info_main img {
   width: 100%;
   height: 100%;
@@ -205,11 +196,6 @@ ul li.desktop:hover {
 
 /* Start Learning */
 
-#start_learning,
-.gallery_content,
-.gallery_text {
-  flex-direction: column;
-}
 #gallery {
   flex-flow: row wrap;
   justify-content: center;
@@ -247,12 +233,6 @@ video {
   height: auto;
   display: block;
 }
-#thesis,
-#thesis_left_content,
-#thesis_left_side,
-#thesis_right_content {
-  flex-direction: column;
-}
 #thesis_left_side,
 #thesis_right_content {
   padding: 0 0 2rem 1.5rem;
@@ -282,6 +262,10 @@ footer {
   color: white;
   padding: 1rem;
   justify-content: space-between;
+  align-items: center;
+}
+i {
+  padding: 0 .5rem;
 }
 
 /* Media Queries */
@@ -289,15 +273,21 @@ footer {
 @media only screen and (max-width: 1024px) {
 
   /* Universal Rules */
-
+  nav,
+  ul,
+  .left,
+  .right {
+    width: 100%;
+  }
+  .nav_m {
+    display: inline-flex;
+    justify-content: center;
+  }
   .mobile {
     display: block;
   }
   .desktop {
     display: none;
-  }
-  .left, .right{
-    width: 100%;
   }
   .main {
     overflow: hidden;
@@ -307,16 +297,14 @@ footer {
   }
 
   /* Mobile Navigation bar */
-
-  nav, nav ul, nav img {
-    width: 100%;
+  .nav_m {
+    display: inline-flex;
+    justify-content: center;
+    padding: .4rem;
   }
-  nav ul {
+  ul {
     display: flex;
     justify-content: space-around;
-  }
-  nav ul li, nav img {
-    display: inline-block;
   }
 
   /* Main Content */
